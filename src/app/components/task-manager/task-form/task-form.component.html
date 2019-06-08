@@ -1,0 +1,14 @@
+<div>
+  <button class="btn btn-dark float-right mb-2" [routerLink]="['/login']" >Logout</button>
+</div>
+<form (submit)="Add($event)">
+    <div class="form-group">
+      <label for="task">Enter Task Title: </label>
+      <input type="text" name="title" [(ngModel)]="title" id="task" class="form-control" placeholder="Enter Task Title here..." [ngClass]="{'is-invalid': title==='' && formSubmitted}">
+      <div class="invalid-feedback">
+        Task can't be blank
+      </div>
+    </div>
+    <button type="submit" class="btn btn-danger">Add Task</button>
+</form>
+
